@@ -10,10 +10,12 @@ const Card = () => {
     display: flex;
     flex-direction: column;
     width: min(300px, fit-content);
-    max-width: 300px;
+    max-width: 350px;
     background: hsl(216, 50%, 16%);
     border-radius: 0px;
     padding: 24px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.095);
+    box-sizing: border-box;
 
     @media (min-width: 400px) {
       border-radius: 15px;
@@ -23,6 +25,8 @@ const Card = () => {
       color: #fff;
       margin-bottom: 0;
       cursor: pointer;
+      font-size: calc(22 / 16 * 1rem);
+      font-weight: 600;
 
       &:hover {
         color: hsl(178, 100%, 50%);
@@ -32,6 +36,7 @@ const Card = () => {
     & p {
       cursor: pointer;
       color: hsl(215, 51%, 70%);
+      font-weight: 300;
     }
   `;
 
@@ -48,7 +53,7 @@ const Card = () => {
       height: 100%;
       width: 100%;
       opacity: 0;
-      border-radius: 15px;
+      border-radius: 8px;
 
       &:hover {
         opacity: 0.5;
@@ -72,7 +77,7 @@ const Card = () => {
     width: 100%;
     align-self: center;
     justify-self: center;
-    border-radius: 15px;
+    border-radius: 8px;
     display: block;
   `;
 
@@ -80,15 +85,18 @@ const Card = () => {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    font-size: calc(16 / 16 * 1rem);
 
     & .cost {
       color: hsl(178, 100%, 50%);
       cursor: pointer;
+      font-weight: 600;
     }
 
     & .time {
       color: hsl(215, 51%, 70%);
       cursor: pointer;
+      font-weight: 400;
     }
   `;
 
@@ -115,6 +123,8 @@ const Card = () => {
   const AvatarWrapper = styled.div`
     display: flex;
     align-items: center;
+    font-weight: 400;
+    font-size: calc(16 / 16 * 1rem);
 
     & p {
       color: hsl(215, 51%, 70%);
@@ -133,7 +143,7 @@ const Card = () => {
   const Avatar = styled.img`
     width: 33px;
     height: 33px;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-radius: 50%;
     margin-right: 16px;
   `;
