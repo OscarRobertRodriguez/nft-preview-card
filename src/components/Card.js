@@ -102,6 +102,7 @@ const Card = () => {
     border-top: 1px solid hsl(215, 32%, 27%);
     width: 100%;
     opacity: 0.6;
+    margin-top: 24px;
   `;
 
   const AvatarWrapper = styled.div`
