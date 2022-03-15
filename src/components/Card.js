@@ -27,6 +27,7 @@ const Card = () => {
       cursor: pointer;
       font-size: calc(22 / 16 * 1rem);
       font-weight: 600;
+      transition: color 0.2s ease-in-out;
 
       &:hover {
         color: hsl(178, 100%, 50%);
@@ -54,6 +55,7 @@ const Card = () => {
       width: 100%;
       opacity: 0;
       border-radius: 8px;
+      transition: opacity 0.2s ease-in-out;
 
       &:hover {
         opacity: 0.5;
@@ -133,6 +135,7 @@ const Card = () => {
     & a {
       text-decoration: none;
       color: #fff;
+      transition: color 0.2s ease-in-out;
 
       &:hover {
         color: hsl(178, 100%, 50%);
