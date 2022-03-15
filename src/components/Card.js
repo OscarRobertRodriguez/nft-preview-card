@@ -9,11 +9,15 @@ const Card = () => {
   const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: min(300px, 350px);
-    grid-template-rows: 1fr 300px 80px;
+    width: min(300px, fit-content);
+    max-width: 300px;
     background: hsl(216, 50%, 16%);
-    border-radius: 15px;
+    border-radius: 0px;
     padding: 24px;
+
+    @media (min-width: 400px) {
+      border-radius: 15px;
+    }
 
     & h2 {
       color: #fff;
@@ -34,6 +38,9 @@ const Card = () => {
   const MainImgWrapper = styled.div`
     position: relative;
     cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    align-self: center;
 
     & .background {
       position: absolute;
